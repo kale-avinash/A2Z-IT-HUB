@@ -49,6 +49,10 @@
 
     <!-- Template Stylesheet -->
     <link href="css/style.css" rel="stylesheet">
+
+
+
+
 </head>
 
 
@@ -661,6 +665,23 @@
     <script src="lib/easing/easing.min.js"></script>
     <script src="lib/waypoints/waypoints.min.js"></script>
     <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+
+
+        <script>
+        // Navbar link active class handler
+        document.addEventListener("DOMContentLoaded", function () {
+            const navLinks = document.querySelectorAll('.nav-link');
+
+            navLinks.forEach(link => {
+            link.addEventListener('click', function () {
+                // Remove 'active' from all links
+                navLinks.forEach(nav => nav.classList.remove('active'));
+                // Add 'active' to the clicked link
+                this.classList.add('active');
+            });
+            });
+        });
+        </script>
 
     <!-- Template Javascript -->
     <script src="js/main.js"></script>
